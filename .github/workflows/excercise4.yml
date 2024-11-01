@@ -35,7 +35,7 @@ jobs:
      url: https://separate-vessel.surge.sh
    steps:
      - name: Download the Build Artifact
-       uses: actions/download-artifact@v4.1.2
+       uses: actions/upload-artifact@v3.1.0
        with:
          name: build
      - name: deploy to surge
