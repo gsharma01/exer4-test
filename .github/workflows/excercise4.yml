@@ -1,4 +1,4 @@
-name: buildfork
+name: build
 on:
  push: 
   branches: 
