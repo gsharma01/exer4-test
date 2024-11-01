@@ -34,14 +34,14 @@ jobs:
    needs: build
    environment:
      name: production
-     url: https://separate-vessel.surge.sh
+     url: http://separate-vessel.surge.sh
    steps:
      - name: Download the Build Artifact
        uses: actions/upload-artifact@v3.1.0
        with:
          name: build
      - name: deploy to surge
-       run: npx surge --project ‘.’ --domain https://separate-vessel.surge.sh
+       run: npx surge --project ‘.’ --domain http://separate-vessel.surge.sh
        env:
         SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
         SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
